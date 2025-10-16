@@ -20,4 +20,3 @@ A backend service to manage Users and their Addresses using Node.js, Express.js,
 - CORS
 
 ## 📁 Project Structure
-

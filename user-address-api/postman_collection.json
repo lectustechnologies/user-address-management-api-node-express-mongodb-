@@ -1,0 +1,147 @@
+{
+  "info": {
+    "_postman_id": "user-address-api-collection",
+    "name": "User Address API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/users",
+          "host": ["{{base_url}}"],
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/users",
+          "host": ["{{base_url}}"],
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/users/:id",
+          "host": ["{{base_url}}"],
+          "path": ["users", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jane Doe\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/users/:id",
+          "host": ["{{base_url}}"],
+          "path": ["users", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{base_url}}/users/:id",
+          "host": ["{{base_url}}"],
+          "path": ["users", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Create Address",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"<user_id>\",\n  \"street\": \"123 Main St\",\n  \"city\": \"NY\",\n  \"state\": \"NY\",\n  \"zip\": \"10001\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/addresses",
+          "host": ["{{base_url}}"],
+          "path": ["addresses"]
+        }
+      }
+    },
+    {
+      "name": "Get All Addresses",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/addresses",
+          "host": ["{{base_url}}"],
+          "path": ["addresses"]
+        }
+      }
+    },
+    {
+      "name": "Get Address by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/addresses/:id",
+          "host": ["{{base_url}}"],
+          "path": ["addresses", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Update Address",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"street\": \"456 Elm St\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/addresses/:id",
+          "host": ["{{base_url}}"],
+          "path": ["addresses", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Delete Address",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{base_url}}/addresses/:id",
+          "host": ["{{base_url}}"],
+          "path": ["addresses", ":id"]
+        }
+      }
+    }
+  ]
+}
